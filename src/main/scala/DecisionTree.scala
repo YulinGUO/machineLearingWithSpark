@@ -48,14 +48,18 @@ object DecisionTree {
     val metrics = getMetrics(model, testData)
 
 
+    //decision tree model
     println("model:::::"+model.toString())
 
+
+    //our label is binary
     println("precision:0:::::::::::::::"+metrics.precision(0))
     println("recall pre:0::::::::::"+metrics.recall(0))
 
     println("precision:1:::::::::::::::"+metrics.precision(1))
     println("recall pre:1:::::::::::::::"+metrics.recall(1))
 
+    //confusion matrix
     println("confusionMatrix:::::::::::::::"+metrics.confusionMatrix)
 
     sc.stop()
